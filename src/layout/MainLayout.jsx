@@ -165,10 +165,10 @@ const MainLayout = () => {
       <Modal show={show} onHanldeShow={setShow} title="测试">
         <div className="border-2 text-center">
           <span className="text-4xl font-bold">登录Twitter</span>
-          <div className="text-lg ring-2 ring-[#dadce1]  text-center h-10 leading-10 rounded-3xl mt-4 mb-2 cursor-pointer hover:bg-[#f8faff] w-[50%] relative left-[50%] translate-x-[-50%]">
+          <div className="text-lg ring-2 ring-[#dadce1]  text-center h-10 leading-10 rounded-3xl mt-4 mb-2 cursor-pointer hover:bg-[#f8faff] w-[55%] relative left-[50%] translate-x-[-50%]">
             使用 Google 账号登录
           </div>
-          <div className="text-lg ring-2 ring-[#dadce1]  text-center h-10 leading-10 rounded-3xl mt-4 mb-2 cursor-pointer font-bold hover:bg-[#f8faff] w-[50%] relative left-[50%] translate-x-[-50%]">
+          <div className="text-lg ring-2 ring-[#dadce1]  text-center h-10 leading-10 rounded-3xl mt-4 mb-2 cursor-pointer font-bold hover:bg-[#f8faff] w-[55%] relative left-[50%] translate-x-[-50%]">
             <i className="fab fa-apple text-2xl align-baseline" />
             &nbsp;使用Apple登录
           </div>
@@ -178,7 +178,12 @@ const MainLayout = () => {
             或
             <div className="h-[50%] w-[45%] border-b-2 border-[#cfdade] absolute top-0 right-0"></div>
           </div>
-          <input type="text" className=" h-14 m-2 ring-1 ring-[#cfdade] w-[50%] relative left-[25%] translate-x-[-50%] focus:ring-[#009fed]" placeholder="手机号码,用户名或者邮箱"  />
+          <input
+            onClick={(e) => e.stopPropagation()}
+            type="text"
+            className="pl-2 h-14 m-2 ring-2 ring-[#cfdade] w-[50%] relative left-[25%] translate-x-[-50%] outline-none rounded-md focus:ring-[#009fed] placeholder:text-lg focus:placeholder:text-sm   focus:placeholder:translate-y-[-75%]  focus:placeholder:translate-x-[-0.5%]  focus:placeholder:text-[#009fed] focus:placeholder:duration-500 "
+            placeholder="手机号码,用户名或者邮箱"
+          />
         </div>
       </Modal>
     </div>
