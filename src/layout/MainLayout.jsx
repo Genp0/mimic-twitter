@@ -5,7 +5,7 @@ import SettingIcon from "../components/Icon/SettingIcon";
 const MainLayout = () => (
   <div className="h-screen flex flex-row">
     {/* 左 */}
-    <div className="hideen md:flex md:flex-[0.8] md:justify-end md:mr-10 lg:justify-start lg:ml-10 ">
+    <div className="hideen md:flex md:flex-[0.6] md:justify-end md:mr-10 lg:justify-start lg:ml-10 ">
       <div className="hidden md:flex md:flex-col md:w-[14%]  md:h-[25%]  md:justify-around">
         <i className="fab fa-twitter text-[#009fed] text-5xl" />
         <HashTag displaySize="md" />
@@ -22,7 +22,7 @@ const MainLayout = () => (
       </div>
     </div>
     {/* 中 */}
-    <div className="flex-[2] border-[1px] shadow-sm flex flex-col items-center">
+    <div className="flex-[1.5] border-[1px] shadow-sm flex flex-col items-center">
       {/* 搜索栏 */}
       <div className="w-full  mt-2 flex h-12  justify-around">
         <div className=" w-[80%] flex rounded-3xl overflow-hidden hover:ring-2 hover:ring-[#009fed] duration-300 ">
@@ -108,8 +108,43 @@ const MainLayout = () => (
         </ul>
       </div>
     </div>
-    {/* 右边 */}
-    <div className="hidden lg:block lg:flex-1">3</div>
+    {/* 右 */}
+    <div className="hidden lg:flex-1 lg:flex lg:flex-col items-center space-x-2">
+      {/* title和desc */}
+      <div className="w-[348px] border-2 border-[#eff3f4] mt-4 rounded-xl p-3">
+        <div>
+          <span className="font-bold text-xl">初到Twitter?</span>
+          <br />
+          <span className="text-[#526471]">
+            立即注册，获取你自己的个性化时间线！
+          </span>
+          <div className="text-lg ring-2 ring-[#dadce1]  text-center h-10 leading-10 rounded-3xl mt-4 mb-2 cursor-pointer hover:bg-[#f8faff]">
+            使用 Google 账号注册
+          </div>
+          <div className="text-lg ring-2 ring-[#dadce1]  text-center h-10 leading-10 rounded-3xl mt-4 mb-2 cursor-pointer font-bold hover:bg-[#f8faff]">
+            <i className="fab fa-apple text-2xl align-baseline" />{" "}
+            &nbsp;使用Apple注册
+          </div>
+          <div className=" text-lg ring-2 ring-[#dadce1]  text-center h-10 leading-10 rounded-3xl mt-4 mb-2 cursor-pointer font-bold  hover:bg-[#f8faff]">
+            创建账号
+          </div>
+          <div className=" text-[#526471] mt-4 ">
+            注册即表示同意
+            <a href="javascript::" className="text-[#8ecaf6] hover:underline">
+              服务条款
+            </a>
+            及
+            <a href="javascript::" className="text-[#8ecaf6] hover:underline">
+              隐私政策
+            </a>
+            ，其中包括
+            <a href="javascript::" className="text-[#8ecaf6] hover:underline">
+              Cookie 使用条款
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
