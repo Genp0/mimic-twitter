@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RouterProvider } from "react-router-dom";
-import router from "./router";
+import routes from "./router";
 function App() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={routes} />;
 }
 
 export default App;

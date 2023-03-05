@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
+
 const BottomBar = (props) => {
   const { onHandleClick } = props;
+  const navigate = useNavigate()
   return (
     <div className="w-full h-[4.5rem] fixed bottom-0 bg-[#009eeb] flex flex-row">
       {/* 左边 */}
@@ -15,16 +19,16 @@ const BottomBar = (props) => {
           </div>
           {/* 按钮 */}
           <div className="flex-1 md:flex-[0.4] h-full flex flex-row justify-center p-5 gap-3 ">
-            <button onClick={()=>onHandleClick(true)}  className="flex-1 font-bold md:text-sm md:flex-[0.2] ring-1 h-8  rounded-3xl ring-[#f0f0f0] hover:bg-[#34a7ee]">
+            <button onClick={() => onHandleClick(true)} className="flex-1 font-bold md:text-sm md:flex-[0.2] ring-1 h-8  rounded-3xl ring-[#f0f0f0] hover:bg-[#34a7ee]">
               登录
             </button>
-            <button className="flex-1 font-bold  md:text-sm md:flex-[0.2] ring-1 h-8  rounded-3xl ring-[#f0f0f0] bg-white text-black hover:bg-[#eff3f4]">
-              注册
-            </button>
-          </div>
+            <button onClick={() => navigate('/signup')} className="flex-1 font-bold  md:text-sm md:flex-[0.2] ring-1 h-8  rounded-3xl ring-[#f0f0f0] bg-white text-black hover:bg-[#eff3f4]">
+            注册
+          </button>
         </div>
       </div>
     </div>
+    </div >
   );
 };
 

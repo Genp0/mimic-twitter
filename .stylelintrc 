@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-recommended",
+  "processors": ["stylelint-processor-styled-components"],
+  "syntax": "scss",
+  "rules": {
+    "selector-max-id": null,
+    "selector-max-universal": 1,
+    "declaration-colon-newline-after": null,
+    "declaration-empty-line-before": null,
+    "no-eol-whitespace": true
+  }
+}
